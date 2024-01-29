@@ -1,0 +1,4 @@
+(executable
+ (public_name observe)
+ (name main)
+ (libraries cohttp-lwt-unix conduit-lwt tyxml sqlite3))

@@ -1,0 +1,52 @@
+body {
+  font-family: 'Inter';
+  font-size: 16px;
+}
+
+.content {
+  width: 90%;
+  max-width: 520px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.host {
+  border: 1px outset grey;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.header {
+  background: #faf8f3;
+}
+
+.good {
+  color: #2fcc66;
+}
+
+.bad {
+  background: #e74c3c;
+}
+
+.spacer {
+  height: 1px;
+  background: #aaaaaa;
+  flex: 1;
+  margin: 0.5rem 1rem 0 1rem;
+}
+
+.timeline {
+  display: flex;
+}
+
+.legend {
+  font-family: 'Inter';
+  font-size: 10px;
+}
+
+.graph {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
