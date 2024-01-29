@@ -57,7 +57,7 @@ let server =
       in 
       let status = List.map (fun (host, state) ->
         let rows = Db.query db (Sqlite3.prepare db {| SELECT SUM(failure), strftime('%Y-%m-%d %H', time) hour, COUNT(*)
-                                                      FROM results WHERE host = ? GROUP BY hour, host ORDER BY time LIMIT 48; |}) Sqlite3.Data.[ TEXT host ] in
+                                                      FROM results WHERE host = ? GROUP BY hour ORDER BY time DESC LIMIT 48; |}) Sqlite3.Data.[ TEXT host ] in
         let _, fails, sum, graph = List.fold_left (fun (x, fails, sum, acc) row ->
           match row with
             | [ Sqlite3.Data.INT f; Sqlite3.Data.TEXT _; Sqlite3.Data.INT c; ] -> 
